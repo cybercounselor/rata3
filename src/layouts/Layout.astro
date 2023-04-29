@@ -20,7 +20,7 @@ import Navbar from "../components/Navbar.astro";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -28,7 +28,7 @@ import Navbar from "../components/Navbar.astro";
 		<Navbar/>
 		<main class="mx-auto container md:pt-5">
 			<slot/>
-			<Scrollup/>
+			<Scrollup />
 		</main>
 		<Footer/>
 	</body>

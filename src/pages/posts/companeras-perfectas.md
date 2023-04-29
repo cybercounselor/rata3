@@ -6,4 +6,5 @@ hero: "/images/batman.jpg"
 tags: ["adoptar"]
 layout: "../../layouts/Layout.astro"
 ---
-<!--https://www.youtube.com/watch?v=3lNvl1vLF4M-->
+# Porqué elegir a una rata
+## 🐀 Lo mas lindo de tener ratas
