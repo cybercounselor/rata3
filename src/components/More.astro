@@ -1,0 +1,53 @@
+<section class="flex flex-col bg-rose-300/100  md:flex-row md:p-15 py-10 gap-y-10">
+    <div class="flex-1 grid grid-cols-2 gap-5">
+             <a href="/vets" class="btn text-center mix-blend-overlay hover:mix-blend-normal">
+            <img src="../images/cuidado.png" class="giro w-40 m-auto rounded-full">
+            <p class="mt-4 font-bold">SALUD Y CUIDADO</p>
+          </a>
+          <a href="/vets" class="text-center mix-blend-overlay hover:mix-blend-normal"><img src="../images/veterinaria_de_ratas.jpg" class="giro w-40 m-auto rounded-full"> <p class="mt-4 font-bold">VETERINARIAS</p></a>
+          <a href="/tienda" class="text-center mix-blend-overlay hover:mix-blend-normal">
+            <img src="../images/productos.png" class="giro w-40 m-auto rounded-full">
+            <p class="mt-4 font-bold">TIENDA</p>
+          </a>
+          <a href="https://t.me/ratfriendly" class="text-center mix-blend-overlay hover:mix-blend-normal">
+          <img src="../images/adopciones.png" class="giro w-40 m-auto rounded-full">
+          <p class="mt-4 font-bold">ADOPCIONES</p>
+          </a>
+    </div>
+
+    <div class="flex flex-1 flex-col gap-y-4 text-center self-center ">
+      
+    <section class="titulos">
+        <ul class="flex flex-col gap-y-2 font-bold  underline">
+          <a href="../../posts/Nombres-de-rata" class="text-blue-500 hover:text-white active:text-cyan-600 visited:text-gray-500">Los mejores nombres para ratas</a>
+          <a href="../../posts/Donde-conseguir-ratas" class="text-blue-500 hover:text-white active:text-cyan-600 visited:text-gray-500">Donde conseguir ratas</a>
+          <a href="../../posts/Como-tomar-cafe-con-ratas" class="text-blue-500 hover:text-white active:text-cyan-600 visited:text-gray-500">Cómo tomar café con ratas</a>
+          <a href="../../posts/personalidad" class="text-blue-500 hover:text-white active:text-cyan-600 visited:text-zinc-500">La personalidad de las ratas</a>
+          <a href="../../posts/ratas-viejitas" class="text-blue-500 hover:text-white active:text-cyan-600 visited:text-gray-500">Cómo acompañarlas en la vejez</a>
+          <a href="../../posts/companeras-perfectas" class="text-blue-500 hover:text-white active:text-cyan-600 visited:text-zinc-500">Razones para elegirlas</a>
+         </ul>
+      </section>
+        <a href="../pages/blog.astro"><button class="bg-sky-500/75 m-4 px-3 py-4 hover:bg-gradient-to-b from-cyan-300 to-red-300 font-bold rounded-xl">
+            +Artículos
+            </button></a>
+          
+    </div>
+    
+</section>
+<style>
+  .giro {
+  transform-origin: center;
+  transition: transform 2s;
+  transform: rotate(0deg);
+}
+
+    .giro:active,
+    .giro:focus {
+  transform: rotate(45deg);
+}
+    @media (hover:hover){
+            .giro:active{
+            transform:rotate(45deg)
+        }
+    }
+</style>

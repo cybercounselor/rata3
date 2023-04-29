@@ -1,0 +1,13 @@
+
+{
+"projects":[
+    {
+        "title":"Cerfificar mi negocio",
+        "description":"Envia un mensaje con los datos de tu negocio, y Roerto se presentará con sus amigos. Si todo es rico y nadie se asusta, tu negocio será incluído en nuestra lista. Dejarémos un sticker del certificado y compartiremos en nuestras redes toda la experiencia. Luego seguiremos compartiendo  cada vez que otra rata amigable visite tu negocio y nos etiquete. Si te gusta la idea, contactanos para coordinar una visita.",
+        "image": "images/certificado.png",
+        "button":"CERTIFICAR AHORA",
+        "btlink":"/contact"
+    }
+    
+]
+}

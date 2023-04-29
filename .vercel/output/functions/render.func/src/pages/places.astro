@@ -1,0 +1,82 @@
+---
+  import Layout from "../layouts/Layout.astro";
+  import Places from "../config/places.json";
+---  
+<Layout title="Rat Friendly" description="">  
+ 
+  <div class="bg-rose-400  grid grid-cols-1  sm:grid-cols-2 m-0">
+      <img class="h-64 w-auto object-cover rounded-full m-5 " src="images/certificado.png" alt="certificado rat friendly">
+  <div class="my-0">
+      <p class="h-auto w-auto p-5">La certificación Rat Friendly nació de nuestra experiencia de salir a pasear con nuestras ratas. Afortunadamente, la mayoría de los lugares son respetuosos, en especial después de comprobar que las ratas no son nada parecidas a las que se ven en la ficción. Las personas se sorprenden al descubrir que son cariñosas, tranquilas y hermosas.</p>
+    
+      <p class="h-auto w-auto p-5">Sin embargo, todavía hay prejuicios y maltratos hacia las ratas de compañía, y  no sabemos dónde encontraremos este tipo de situaciones. Por lo tanto, inspirados en el ya conocido "Pet Friendly", y dado que esta categoría solo incluye a los perros, consideramos necesario crear una certificación Rat Friendly.</p>
+    
+      <p class="h-auto w-auto p-5">Los hamsters, cobayos y hurones, aunque no son ratas, son igualmente bienvenidos. 
+      </p>
+      <button class="bg-sky-500/75 m-4 px-3 py-2 font-bold rounded-xl">Certificar mi negocio</button>
+    </div>
+  </div>
+
+  <h1 class="font-bold ml-2 text-2xl text-left p-5 text-rose-400">LUGARES CERTIFICADOS RAT FRIENDLY</h1>
+  <div class=" grid grid-cols-1  sm:grid-cols-2 m-0"> <!--este div es todo el coso las 2 columnas -->
+      
+
+      <div> <!--Este div es la columna de los cafes -->
+      <ul class="space-y-8 mt-10 p-4">
+        {
+        Places.map((place) => {
+          return (
+          <li {...{ key: place.nombre }}  class="flex space-x-5">
+              <div class="flex-shrink-0">
+                  <img src={place.fotos[0]} alt={"Foto de " + place.nombre} class="h-16 w-16 object-cover rounded-full">
+                  </div>
+                      <div class="flex-1">
+                      <div class="font-bold text-xl">{place.nombre}</div>
+                      <div class="text-gray-500 mb-1">{place.horarios}</div>
+                      <div class="text-gray-500 mb-1">{place.direccion} <a href={place.google_maps} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">Ver en Google Maps</a></div>
+                      <div class="text-gray-300 mb-4">{place.resena}
+                      </div>
+                  <div class="flex space-x-4 mb-4">
+                      <img src={place.fotos[1]} alt={"Foto de " + place.nombre} class="h-48 w-48 object-cover rounded">
+                      </div> 
+                      <div>
+                      <a href={place.sitio_web} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">Sitio Web</a>
+                      </div>
+                      </div>
+                      </li>
+);
+})
+}
+</ul>
+</div>
+  <div class="grid grid-rows-3 grid-cols-1 "> <!-- este div es la columna derecha-->
+          <div><img class="h-screen w-full object-cover" src="../images/heladeria.jpg" alt="rata comiendo helado"></div>
+        
+          <div><video class="h-screen w-full object-cover" src="../images/rata_en_starbucks.mp4" muted autoplay></video></div>
+  
+          <div><img src="../images/helados.jpg" alt=""></div>
+  </div>
+</div>
+
+      
+      
+        <div class="bg-zinc-900 text-center rounded-lg p-3 m-3">
+            <div> 
+              <p>Si deseas unirte a la certificación de lugares en tu ciudad o barrio, envía un mensaje a <a href="mailto:rat@ratfriendly.org">rat@ratfriendly.org</a></p>
+            </div>
+        </div>
+            
+                
+</Layout>
+             
+  <style>
+    .gridcafe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  </style>
+
+
+  
+
+  

@@ -1,0 +1,14 @@
+[
+    {
+        "title":"LISTA DE LUGARES RAT FRIENDLY",
+        "description":"Donde ir de paseo con tus ratas.",
+        "image": "images/certificado.png",
+        "link": "/places"
+    },
+    {
+        "title":"SALIDAS",
+        "description":"Organizamos salidas con ratas, sumate con las tuyas.",
+        "image": "images/salidas.png",
+        "link": "https://t.me/ratfriendly"
+    }
+]

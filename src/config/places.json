@@ -1,0 +1,39 @@
+[
+    {
+      "nombre": "The embers-Urquiza",
+      "horarios": "9:00-00:00",
+      "resena": "Tiene mesitas afuera con protectores plasticos que reducen el viento. Ya saben lo mucho que las ratas odian las corrientes de aire. Las meseras y meseros son muy buena onda, con nosotros y con las ratas.",
+      "direccion": "Mendoza 5200, CABA",
+      "google_maps": "https://goo.gl/maps/qTEeZZ4CZDaFbHoR9",
+      "fotos": [
+        "../../images/location-pin.png",
+        "https://via.placeholder.com/300x200"
+      ],
+      "sitio_web": "http://www.theembersrestaurant.com.ar/"
+    },
+    {
+      "nombre": "Liquiliqui",
+      "horarios": "Lunes a Sábado, 7am - 8pm",
+      "resena": "Un lugar tranquilo y acogedor para disfrutar de un buen café. Respetuosos con las ratas incluso aunque les dan un poquito de impresión. Cuando vamos sin ellas, preguntan amistosamente como estan.",
+      "direccion": "Tronador 602, CABA",
+      "google_maps": "https://goo.gl/maps/SWrALCXXB3MDdQKA8",
+      "fotos": [
+        "../../images/location-pin.png",
+        "../../images/liquiliqui.jpg"
+      ],
+      "sitio_web": "https://www.instagram.com/liquiliqui_ba/"
+    },
+    {
+      "nombre": "Calmo",
+      "horarios": "7am - 8pm",
+      "resena": "Uno de los pocos lugares donde todo el staff se acerca a saludar a las ratas. Un aplauso para recusos humanos!. El lugar es muy lindo, la decoración es muy Fancy rats. En la comida siempre valoramos las opciones veganas y celíacas, quisísimo.",
+      "direccion": "Av. de los Incas 3909, CABA",
+      "google_maps": "https://goo.gl/maps/w35V5TCkxQvhumc67",
+      "fotos": [
+        "../../images/location-pin.png",
+        "../../images/saunarat.jfif"
+      ],
+      "sitio_web": "https://ejemplo.com/cafe-del-centro"
+    }
+  ]
+  

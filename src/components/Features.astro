@@ -1,0 +1,35 @@
+---
+import features from "../config/features.json";
+
+---
+
+
+<h1 class="text-center m-10 text-5xl font-bold pd-2 text-rose-400">PASEANDO CON RATAS</h1>
+
+<div class="grid md:grid-cols-2 gap-5 p-4">
+    {
+        features.map ((feature) =>(
+            <div class="bg-zinc-900 rounded-xl">
+                <h2 class="text-2xl text-center font-bold my-4">{feature.title}</h2>    
+                    <p class="my-4 text-center">{feature.description}</p>
+                    <a  href={feature.link}><img src={feature.image} class="giro w-64  m-auto rounded-full max-h-96"/></a>
+            </div>
+        ))
+
+    }
+</div>
+<style>
+    .giro {
+  transform-origin: center;
+  transition: transform 2s;
+  transform: rotate(0deg);
+    }
+    .giro:active, .giro:focus {
+  transform: rotate(45deg);
+}
+    @media (hover:hover){
+          .giro:active{
+            transform:rotate(45deg)
+        }
+    }
+</style>

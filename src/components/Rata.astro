@@ -1,0 +1,235 @@
+<div class="wheel-and-rat" role="img" aria-label="rata caminando">
+	
+	<div class="rat">
+		<div class="rat__body">
+			<div class="rat__head">
+				<div class="rat__ear"></div>
+				<div class="rat__ojo"></div>
+				<div class="rat__nariz"></div>
+			</div>
+			<div class="rat__limb rat__limb--fr"></div>
+			<div class="rat__limb rat__limb--fl"></div>
+			<div class="rat__limb rat__limb--br"></div>
+			<div class="rat__limb rat__limb--bl"></div>
+			<div class="rat__tail"></div>
+		</div>
+	</div>
+	<div class="spoke"></div>
+  <div class="rat returning"></div>
+
+</div>
+
+<style>
+ 
+
+.wheel-and-rat {
+	--dur: 1s;
+	position: relative;
+	width: 12em;
+	height: 5em;
+}
+
+.rat,
+.rat div {
+	position: absolute;
+}
+
+
+
+.rat {
+	animation: rat var(--dur) ease-in-out infinite;
+	top: -290%;
+	left: calc(100% - 3.5em);
+	width: 7em;
+	height: 3.75em;
+	transform: rotate(4deg) translate(-0.8em,1.85em);
+	transform-origin: 50% 0;
+	z-index: 1;
+}
+.rat__head {
+	animation: ratHead var(--dur) ease-in-out infinite;
+	background: hsl(0, 1%, 32%);
+	border-radius: 70% 50% 0 100% / 40% 25% 25% 60%;
+	box-shadow:
+		0 -0.25em 0 hsl(0, 8%, 95%) inset,
+		0.75em -1.55em 0 hsl(30, 56%, 94%) inset;
+	top: 0;
+	left: -2em;
+	width: 3em;
+	height: 2em;
+	transform-origin: 100% 50%;
+}
+.rat__ear {
+	animation: ratEar var(--dur) ease-in-out infinite;
+	background: hsl(0,90%,85%);
+	border-radius: 50%;
+	box-shadow: -0.25em 0 hsl(30, 9%, 87%) inset;
+	top: -0.25em;
+	right: -0.25em;
+	width: 1em;
+	height: 1.5em;
+	transform-origin: 50% 75%;
+}
+.rat__ojo {
+	animation: ratojo var(--dur) linear infinite;
+	background-color: hsl(0,0%,0%);
+	border-radius: 40%;
+	top: 0.450em;
+	left: 1.25em;
+	width: 0.7em;
+	height: 0.3em;
+}
+.rat__nariz {
+	background: hsl(0,90%,75%);
+	border-radius: 35% 45% 85% 15% / 30% 50% 50% 30%;
+	top: 0.75em;
+	left: 1;
+	width: 0.4em;
+	height: 0.3em;
+}
+.rat__body {
+	animation: ratBody var(--dur) ease-in-out infinite;
+	background: hsl(30,90%,90%);
+	border-radius: 40% 30% 50% 30% / 15% 60% 40% 40%;
+	box-shadow:
+		0.1em 0.75em 0 hsl(0, 1%, 21%)inset,
+		0.15em -0.5em 0 hsl(0, 0%, 89%) inset;
+	top: 0.25em;
+	left: 2em;
+	width: 5.5em;
+	height: 2.5em;
+	transform-origin: 40% 50%;
+	transform-style: preserve-3d;
+}
+.rat__limb--fr,
+.rat__limb--fl {
+	clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
+	top: 2em;
+	left: 0.5em;
+	width: 1em;
+	height: 1.5em;
+	transform-origin: 50% 0;
+}
+.rat__limb--fr {
+	animation: ratFRLimb var(--dur) linear infinite;
+	background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0, 85%, 82%) 80%);
+	transform: rotate(15deg) translateZ(-1px);
+}
+.rat__limb--fl {
+	animation: ratFLLimb var(--dur) linear infinite;
+	background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
+	transform: rotate(15deg);
+}
+.rat__limb--br,
+.rat__limb--bl {
+	border-radius: 0.75em 0.75em 0 0;
+	clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
+	top: 1em;
+	left: 3.5em;
+	width: 1.5em;
+	height: 2.5em;
+	transform-origin: 50% 30%;
+}
+.rat__limb--br {
+	animation: ratBRLimb var(--dur) linear infinite;
+	background: linear-gradient(hsl(31, 87%, 91%) 90%,hsl(0, 79%, 87%) 90%);
+	transform: rotate(-25deg) translateZ(-1px);
+}
+.rat__limb--bl {
+	animation: ratBLLimb var(--dur) linear infinite;
+	background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
+	transform: rotate(-25deg);
+}
+.rat__tail {
+	animation: ratTail var(--dur) linear infinite;
+	background: hsl(0,90%,85%);
+	border-radius: 0.25em 50% 50% 0.25em;
+	box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
+	top: 1em;
+	right: -3em;
+	width: 4em;
+	height: 0.4em;
+	transform: rotate(30deg) translateZ(-1px);
+	transform-origin: 0.5em 0.5em;
+}
+
+
+/* Animations */
+@keyframes rat {
+	from, to { transform: rotate(4deg) translate(-0.8em,1.85em); }
+	50% { transform: rotate(0) translate(-0.8em,1.85em); }
+}
+@keyframes ratHead {
+	from, 25%, 50%, 75%, to { transform: rotate(0); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(6deg); }
+}
+@keyframes ratojo {
+	from, 90%, to { transform: scaleY(1); }
+	95% { transform: scaleY(0); }
+}
+@keyframes ratEar {
+	from, 25%, 50%, 75%, to { transform: rotate(0); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(15deg); }
+}
+@keyframes ratBody {
+	from, 25%, 50%, 75%, to { transform: rotate(0); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(-2deg); }
+}
+@keyframes ratFRLimb {
+	from, 25%, 50%, 75%, to { transform: rotate(50deg) translateZ(-1px); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(-30deg) translateZ(-1px); }
+}
+@keyframes ratFLLimb {
+	from, 25%, 50%, 75%, to { transform: rotate(-30deg); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(50deg); }
+}
+@keyframes ratBRLimb {
+	from, 25%, 50%, 75%, to { transform: rotate(-60deg) translateZ(-1px); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(20deg) translateZ(-1px); }
+}
+@keyframes ratBLLimb {
+	from, 25%, 50%, 75%, to { transform: rotate(20deg); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(-60deg); }
+}
+@keyframes ratTail {
+	from, 25%, 50%, 75%, to { transform: rotate(30deg) translateZ(-1px); }
+	12.5%, 37.5%, 62.5%, 87.5% { transform: rotate(10deg) translateZ(-1px); }
+}
+
+@keyframes moverat {
+  0% {
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(calc(50vw - 6em));
+  }
+  100% {
+    transform: translateX(-12em);
+  }
+}
+
+.wheel-and-rat {
+  --dur: 5s;
+  animation: moverat var(--dur) linear infinite;
+  position: relative;
+  width: 12em;
+  height: 2em;
+}
+.wheel-and-rat .rat {
+  /* Elimina las propiedades top y left */
+  transform: rotate(4deg) translate(-0.8em, 1.85em);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
+@keyframes moveratReturn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+</style>

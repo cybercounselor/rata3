@@ -1,0 +1,20 @@
+---
+import {projects} from "../config/projects.json";
+---
+{   
+    projects.map((project) => (
+        <div class="flex flex-col mb-2 text-center md:text-left md:flex-row md:mt-4">
+            <div class="flex-1 p-2 ">
+                <h2 class="font-bold text-4xl my-5 text-rose-400">
+                    {project.title}</h2>
+                <p class="my-1">{project.description}</p>     
+            </div>
+            
+            <div class="flex-1 p-2">
+                <img src={project.image} class="w-72 m-auto rounded-full border-2 shadow-xl border-rose-300/100 max-h-72"/>  
+            </div>       
+        </div>
+            
+    ))
+}
+
