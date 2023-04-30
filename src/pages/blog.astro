@@ -13,7 +13,7 @@ const seoDescription = 'Vivir con ratas';
 const allPosts = await Astro.glob<MarkdownFrontmatter>('./posts/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 ---
- <Layout title={title} description={seoDescription} description={description} >
+ <Layout title={title} description={seoDescription} >
   
     <article class="max-w-6xl mx-auto px-3">
        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8"       data-test="articles-section">
