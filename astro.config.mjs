@@ -11,6 +11,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.ratfriendly.org",
   integrations: [react(), tailwind(), alpinejs(), sitemap()],
   output: 'server',
   adapter: vercel(),
